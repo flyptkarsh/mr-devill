@@ -7,3 +7,7 @@
  *= require_self
  *= require_tree .
 */
+
+#logo > a > img {
+  width: 100% !important;
+}
