@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/solidusio-contrib/solidus_static_content.git
+  revision: 551b6859d386ab241c284146f75c445965f35505
+  specs:
+    solidus_static_content (2.3.0)
+      deface (~> 1.0.2)
+      solidus (>= 1.1, < 3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -363,6 +371,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   solidus
   solidus_auth_devise
+  solidus_static_content!
   spring
   turbolinks
   uglifier (>= 1.3.0)
