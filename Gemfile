@@ -51,3 +51,4 @@ end
 gem 'solidus'
 gem 'solidus_auth_devise'
 gem 'solidus_static_content', github: 'solidusio-contrib/solidus_static_content'
+gem 'solidus_sitemap', github: 'solidusio-contrib/solidus_sitemap', branch: 'master'
