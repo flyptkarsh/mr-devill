@@ -24,7 +24,7 @@
 <% if products.any? %>
   <% products.each do |product| %>
     <% url = spree.product_path(product, taxon_id: @taxon.try(:id)) %>
-    <div class="col-md-4 productbox">
+    <div class="col-md-3 col-sm-6 productbox">
         <%= image_tag(product.display_image.attachment(:small), class: "img-responsive") %>
         <div class="producttitle"><%= link_to truncate(product.name, length: 50), url, class: 'info', itemprop: "name", title: product.name %></div>
         <div class="productprice"><div class="pull-right"></div><div class="pricetext"><%= display_price(product) %></div></div>

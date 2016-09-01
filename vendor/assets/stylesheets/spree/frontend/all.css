@@ -31,7 +31,6 @@
 }
 body {
   font-family: 'Playfair Display', serif !important;
-  font-size: x-large !important;
 }
 h1, h2, h3, h4, h5 {
 	font-family: MPIDeco;
@@ -65,16 +64,19 @@ h1, h2, h3, h4, h5 {
 }
 .productbox {
   background-color:#ffffff;
-  height: 200px;
+  min-height: 300px;
 	padding:10px;
-	margin-bottom:10px;
+	margin-bottom:1em;
 	-webkit-box-shadow: 0 8px 6px -6px  #999;
 	   -moz-box-shadow: 0 8px 6px -6px  #999;
 	        box-shadow: 0 8px 6px -6px #999;
 }
+.productbox:hover {
+  background: #B2C9B2;
+}
 
 .producttitle {
-    font-weight:bold;
+  font-weight:bold;
 	padding:5px 0 5px 0;
 }
 
