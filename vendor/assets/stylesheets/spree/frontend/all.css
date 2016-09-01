@@ -1,13 +1,94 @@
 /*
+
+
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *
  *= require spree/frontend
+ *= require spree/frontend/mpi_deco_webfont
  *= require_self
  *= require_tree .
 */
 
+/*
+  Triadic Color scheme
+  #006400 Darkgreen
+  #000064 DarkBlue
+  #640000 DarkRed
+
+*/
+@import 'https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i';
+
+#header > nav {
+  background-color: #B2C9B2;
+}
+#home-link > a {
+  color: white;
+  font-family: MPIDeco;
+  font-weight: normal;
+  font-style: normal;
+}
+
 #logo > a > img {
+  padding-top: 20px;
   width: 100% !important;
+}
+body {
+  font-family: 'Playfair Display', serif !important;
+  font-size: x-large !important;
+}
+h1, h2, h3, h4, h5 {
+	font-family: MPIDeco;
+	font-weight: normal;
+	font-style: normal;
+}
+
+#taxonomies > ul > li {
+  border-color: darkgreen;
+  list-style-type: none;
+}
+#taxonomies > ul > li:hover {
+
+}
+#taxonomies > ul > li > a {
+  font-family: MPIDeco;
+  font-weight: normal;
+  font-style: normal;
+  padding: 4px;
+  color: darkgreen;
+  font-weight: bolder;
+  font-size: xx-large !important;
+}
+#taxonomies > ul > li > a:hover {
+  background-color: darkgreen;
+  color: white;
+  width: 100%;
+}
+#content {
+  width: 100%;
+}
+.productbox {
+  background-color:#ffffff;
+  height: 200px;
+	padding:10px;
+	margin-bottom:10px;
+	-webkit-box-shadow: 0 8px 6px -6px  #999;
+	   -moz-box-shadow: 0 8px 6px -6px  #999;
+	        box-shadow: 0 8px 6px -6px #999;
+}
+
+.producttitle {
+    font-weight:bold;
+	padding:5px 0 5px 0;
+}
+
+.productprice {
+	border-top:1px solid #dadada;
+	padding-top:5px;
+}
+
+.pricetext {
+	font-weight:bold;
+	font-size:1.4em;
 }

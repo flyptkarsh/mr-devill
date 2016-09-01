@@ -22,23 +22,15 @@
 </div>
 
 <% if products.any? %>
-  <ul id="products" class="inline product-listing" data-hook>
-    <% products.each do |product| %>
-      <% url = spree.product_path(product, taxon_id: @taxon.try(:id)) %>
-      <li id="product_<%= product.id %>" class="<%= cycle("alpha", "secondary", "", "omega secondary", name: "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
-        <% cache(@taxon.present? ? [I18n.locale, current_pricing_options, @taxon, product] : [I18n.locale, current_pricing_options, product]) do %>
-          <div class="product-image">
-            <%= link_to image_tag(product.display_image.attachment(:small), itemprop: "image"), url, itemprop: 'url' %>
-          </div>
-          <%= link_to truncate(product.name, length: 50), url, class: 'info', itemprop: "name", title: product.name %>
-          <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-            <span class="price selling" itemprop="price"><%= display_price(product) %></span>
-          </span>
-        <% end %>
-      </li>
-    <% end %>
-    <% reset_cycle("classes") %>
-  </ul>
+  <% products.each do |product| %>
+    <% url = spree.product_path(product, taxon_id: @taxon.try(:id)) %>
+    <div class="col-md-4 productbox">
+        <%= image_tag(product.display_image.attachment(:small), class: "img-responsive") %>
+        <div class="producttitle"><%= link_to truncate(product.name, length: 50), url, class: 'info', itemprop: "name", title: product.name %></div>
+        <div class="productprice"><div class="pull-right"></div><div class="pricetext"><%= display_price(product) %></div></div>
+    </div>
+  <% end %>
+
 <% end %>
 
 <% if paginated_products.respond_to?(:total_pages) %>
