@@ -24,16 +24,26 @@
   background-color: #B2C9B2;
 }
 
-
+#search-bar {
+  margin-top: 5px;
+}
 #logo > a > img {
-  padding-top: 20px;
   width: 100% !important;
+}
+.container {
+  background-color:rgba(255, 255, 255, 0.7);
 }
 body {
   font-family: 'Playfair Display', serif !important;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/8a/Leopard_fur.JPG");
+
+  background-attachment: fixed;
+  background-size: cover;
 }
-h1, h2, h3, h4, h5 {
-	font-family: MPIDeco;
+h1, h2, h3, h4, h5, .producttitle > a, .productprice {
+	font-family: MPIDeco !important;
+  color: darkgreen !important;
+  font-size: large;
 	font-weight: normal;
 	font-style: normal;
 }
@@ -60,13 +70,15 @@ h1, h2, h3, h4, h5 {
   width: 100%;
 }
 #content {
-  width: 100%;
+  padding: 2em;
+
 }
 .productbox {
-  background-color:#ffffff;
-  min-height: 300px;
-	padding:10px;
-	margin-bottom:1em;
+  min-height: 290px;
+	padding:1em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+
 	-webkit-box-shadow: 0 8px 6px -6px  #999;
 	   -moz-box-shadow: 0 8px 6px -6px  #999;
 	        box-shadow: 0 8px 6px -6px #999;
@@ -77,9 +89,14 @@ h1, h2, h3, h4, h5 {
 
 .producttitle {
   font-weight:bold;
+  background-color:rgba(255, 255, 255, 0.5);
+
 	padding:5px 0 5px 0;
 }
+.producttitle > a {
+  font-size: xx-large !important;
 
+}
 .productprice {
 	border-top:1px solid #dadada;
 	padding-top:5px;
@@ -87,5 +104,10 @@ h1, h2, h3, h4, h5 {
 
 .pricetext {
 	font-weight:bold;
-	font-size:1.4em;
+
+}
+
+#footer {
+  padding-top: 4em;
+
 }
